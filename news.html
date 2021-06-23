@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="entry.css">
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="top">
+        <div id="header">
+            <div class="logo">
+                <img src="img/log.jpg">
+                <a href="#">&nbsp;&nbsp;极客大叔的爱好</a>
+            </div>
+            <div id="nav">
+                <a href="entrypreneur.html">首页</a>&nbsp;&nbsp;
+                <a href="news.html">新闻</a>&nbsp;&nbsp;
+                <a href="aboutus.html">关于我们</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <ul class="list">
+            
+        </ul>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li onclick="pre()" class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li onclick="getUrl(1)" class="page-item"><a class="page-link" href="#">1</a></li>
+            <li onclick="getUrl(2)" class="page-item"><a class="page-link" href="#">2</a></li>
+            <li onclick="getUrl(3)" class="page-item"><a class="page-link" href="#">3</a></li>
+            <li onclick="next()" class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+      </nav>
+    </div>
+    <script>
+
+        let curIdx = Number(window.location.href.split("?page=")[1]) || 1;
+  
+        function getUrl(page){
+            window.location.href=`?page=${page}`
+        }
+  
+        printPage(curIdx)
+  
+        function printPage(page){
+          curIdx = page;
+          axios.get("https://www.fastmock.site/mock/186c0873d117b082fded8d7c1f01e01b/train/train?page=" + page).then(function (res) {
+              console.log(res.data);
+              $('.list').empty();
+              for(let i=0;i<res.data.data.list.length;i++){
+                  let li = $("<li></li>");
+                  li.append(`<img src="${res.data.data.list[i].img}" alt="" style="width: 380px;height: 240px;">`);
+                  li.append(`<p style="font-weight: bold;">${res.data.data.list[i].title}</p>`);
+                  li.append(`<p style="color:darkgrey; font-size: 10px; margin: auto;">${res.data.data.list[i].time}</p>`);
+                  /* li.append(`<p style="font-size: 13px;">${res.data.data.list[i].content}</p>`); */
+                  li.attr('id',res.data.data.list[i].id)
+                  $(".list").append(li);
+  
+                  $('.list li').click(function(){
+                    window.location.href = `newsdetail.html?id=${$(this).attr('id')}`
+                  })
+              }
+          })
+  
+        }
+        function pre() 
+          {
+              if (curIdx > 1) {
+                getUrl(curIdx - 1);
+              }
+              
+          }
+  
+          function next() 
+          {
+              if (curIdx < 3) 
+              {
+                getUrl(curIdx + 1);
+              }
+          }
+      </script>
+
+<div id="footer">
+    <div id="other">
+        <p>利拉德看表时间</p><img src="img/shoukuangma.jpg" alt="">
+    </div>
+</div>
+<div id="bottom">
+    <p>版权所有&copy;大胆创有限公司</p>
+</div>
+</body>
+</html>

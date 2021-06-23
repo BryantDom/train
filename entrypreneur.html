@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业站</title>
+    <link rel="stylesheet" href="entry.css">
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="top">
+        <div id="header">
+            <div class="logo">
+                <img src="img/log.jpg">
+                <a href="#">&nbsp;&nbsp;极客大叔的爱好</a>
+            </div>
+            <div id="nav">
+                <a href="entrypreneur.html">首页</a>&nbsp;&nbsp;
+                <a href="news.html">新闻</a>&nbsp;&nbsp;
+                <a href="aboutus.html">关于我们</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/lurenwang.jpg" class="d-block w-100" alt="..." style="width: 100%;height: 500px;">
+            </div>
+            <div class="carousel-item">
+                <img src="img/lurenwang2.jpg" class="d-block w-100" alt="..." style="width: 100%;height: 500px;">
+            </div>
+            <div class="carousel-item">
+                <img src="img/lilade.jpg" class="d-block w-100" alt="..." style="width: 100%;height: 500px;">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+    </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="service w">
+        <h2>服务范围</h2>
+        <div class="service-content">
+            <ul>
+                <li><img src="img/1.png" alt=""><span>报名</span></li>
+                <li><img src="img/2.png" alt=""><span>获奖礼物</span></li>
+                <li><img src="img/3.png" alt=""><span>联系客服</span></li>
+                <li><img src="img/4.png" alt=""><span>注意事项</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="introduction w">
+        <h2>介绍</h2>
+        <div class="tro">
+            <img src="img/hyj.jpg" alt="">
+            <div class="txt">
+                <h3>黄宇军</h3>
+                <p>中文名：黄宇军,出生年月日：1993年8月18日,所在地：福建泉州,身高：171cm,毕业大学：集美大学。
+                </p>
+                <p>看军哥打球就是一种享受，他时不时就会冒出一波“骚”操作，可以说是路人王中打球最风骚球员，娴熟的控球拘束和花哨的进攻技巧，与他小小的身形完美的融合在一起。</p>
+            </div>
+        </div>
+
+        <div class="tro tro2">
+            <div class="txt">
+                <h3>郑慧杰</h3>
+                <p>他叫郑慧杰，当前最火的草根篮球明星,,外号有两个，一个是“能量杰”，时刻充满能量,另一个就是著名的小ISO，也就是小赵强！
+                </p>
+                <p>慧杰就是赵强的小迷弟，超级崇拜者,也很喜欢的ISO的“炒菜绝活”,,而且还耍的有模有样，所以号称“小ISO”。</p>
+            </div>
+            <img src="img/zhenghuijie.jpg" alt="">
+        </div>
+
+        <div class="tro">
+            <div class="txt">
+                <h3>利拉德</h3>
+                <p>达米恩·利拉德（Damian Lillard），1990年7月15日出生于美国加利福尼亚州奥克兰（Oakland, California），美国职业篮球运动员，司职控球后卫，效力于NBA波特兰开拓者队。</p>
+                <p>达米恩·利拉德于2012年通过选秀进入NBA后一直效力于波特兰开拓者队，新秀赛季当选最佳新秀并入选最佳新秀第一阵容；2013-14年连续两年夺得全明星技巧挑战赛冠军并入选13-14赛季最佳阵容第三阵容；2015-16赛季入选最佳阵容第二阵容；2017-2018赛季入选最佳阵容第一阵容；2018-19赛季入选最佳阵容第二阵容；2019-20赛季当选复赛MVP并入选最佳阵容第二阵容；2020-21赛季入选最佳阵容第二阵容；6次入选全明星阵容。
+                </p>
+            </div>
+            <img src="img/lilade2.jpg" alt="">
+        </div>
+        <h2>新闻</h2>
+        <div class="list" style="display: flex;">
+
+        </div>
+    </div>
+
+    <script>
+
+        let curIdx = Number(window.location.href.split("?page=")[1]) || 1;
+
+        function getUrl(page) {
+            window.location.href = `?page=${page}`
+        }
+
+        printPage(curIdx)
+
+        function printPage(page) {
+            curIdx = page;
+            axios.get("https://www.fastmock.site/mock/186c0873d117b082fded8d7c1f01e01b/train/train?page=" + page).then(function (res) {
+                console.log(res.data);
+                $('.list').empty();
+                for (let i = 0; i < 3; i++) {
+                    let li = $("<li></li>");
+                    li.append(`<img src="${res.data.data.list[i].img}" alt="" style="width: 300px;height: 200px;">`);
+                    li.append(`<p style="font-weight: bold;">${res.data.data.list[i].title}</p>`);
+                    li.append(`<p style="color:darkgrey; font-size: 10px; margin: auto;">${res.data.data.list[i].time}</p>`);
+                    /* li.append(`<p style="font-size: 13px;">${res.data.data.list[i].content}</p>`); */
+                    li.attr('id', res.data.data.list[i].id)
+                    $(".list").append(li);
+
+                    $('.list li').click(function () {
+                        window.location.href = `news-detail.html?id=${$(this).attr('id')}`
+                    })
+                }
+            })
+
+        }
+    </script>
+
+
+    <div id="footer">
+        <div id="other">
+            <p>利拉德看表时间</p><img src="img/shoukuangma.jpg" alt="">
+        </div>
+    </div>
+    <div id="bottom">
+        <p>版权所有&copy;大胆创有限公司</p>
+    </div>
+</body>
+
+</html>
