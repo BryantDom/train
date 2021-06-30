@@ -1,13 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script href="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+    <title>首页</title>
 </head>
+
 <body>
-    <h2>第一个网页</h2>
-    <a href="favorite.html">个人展示页</a>
+    <div class="box">
+        <div class="navs navbars">
+            <div class="navbar-box container">
+                <div class="logo">
+                    <img id="img1" src="img/log.jpg">
+                    <span>极客大叔</span>
+                </div>
+                <div id='menus' class="menu">菜单</div>
+                <div id="lists" class="list list-mobile">
+                    <a href="index.html">首页</a>&nbsp;&nbsp;&nbsp;
+                    <a href="newspaper.html">新闻</a>&nbsp;&nbsp;&nbsp;
+                    <a href="map.html">关于我们</a>&nbsp;&nbsp;&nbsp;
+                    <a href="favorite.html">个人展示页</a>&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/cluolunbo.jpg" class="d-block w-100 img-responsive" alt="..." height="100%" width="100%">
+            </div>
+            <div class="carousel-item">
+                <img src="img/hyjlunbo.jpg" class="d-block w-100 img-responsive" alt="..." height="100%" width="100%">
+            </div>
+            <div class="carousel-item">
+                <img src="img/liladelunbo.jpg" class="d-block w-100 img-responsive" alt="..." height="100%" width="100%">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div>
+        <div class="container content">
+            <div class="book title">
+                
+                <h2 id="no1">
+                    服务范围
+                </h2>
+
+                <div id="c1" class="container">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <img src="img/1.png" height="50px" width="50px">
+                        <br>
+                        <span>报名</span>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <img src="img/2.png" height="50px" width="50px">
+                        <br>
+                        <span>获奖礼物</span>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <img src="img/3.png" height="50px" width="50px">
+                        <br>
+                        <span>联系客服</span>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <img src="img/4.png" height="50px" width="50px">
+                        <br>
+                        <span>注意事项</span>
+                    </div>
+                </div>
+            </div>
+            <div class="book title">
+                <div class="introduction w container">
+                    <h2>介绍</h2>
+                    <div class="tro row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img-responsive"><img src="img/hyj.jpg" alt=""></div>
+                        <div class="txt11 col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                            <br>
+                            <br>
+                            <h3>黄宇军</h3>
+                            <p style="font-size:21px;">中文名：黄宇军,出生年月日：1993年8月18日,所在地：福建泉州,身高：171cm,毕业大学：集美大学。</p>
+                            <p style="font-size:21px;">看军哥打球就是一种享受，他时不时就会冒出一波“骚”操作，可以说是路人王中打球最风骚球员，娴熟的控球拘束和花哨的进攻技巧，与他小小的身形完美的融合在一起。</p>
+                        </div>
+                    </div>
+
+                    <div class="tro tro2 row">
+
+                        <div class="txt col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <h3>郑慧杰</h3>
+                            <p style="font-size:21px;">小ISO</p>
+                            <p style="font-size:21px;">他叫郑慧杰，当前最火的草根篮球明星,,外号有两个，一个是“能量杰”，时刻充满能量,另一个就是著名的小ISO，也就是小赵强！</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img-responsive">
+                            <img src="img/zhenghuijie.jpg" alt=""></div>
+                    </div>
+
+                    <div class="tro row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img-responsive">
+                            <img src="img/lilade.jpg" alt=""></div>
+                        <div class="txt col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <h3>利拉德</h3>
+                            <p style="font-size:21px;">达米恩·利拉德（Damian Lillard），1990年7月15日出生于美国加利福尼亚州奥克兰（Oakland, California），美国职业篮球运动员，司职控球后卫，效力于NBA波特兰开拓者队。</p>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row t1 ">
+                    <div class="list list11 " style="display: flex; list-style-type: none; justify-content: space-around;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="container content">
+            <div id="liao" class="row1 row">
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 img-responsive" style="width: 200px; height: 250px;">
+                    <img src="home.png" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">闽江学院</p>
+                </div>
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 img-responsive" style="width: 200px; height: 250px; ">
+                    <img src="youxiang.png" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">1071769102@qq.com</p>
+                </div>
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 img-responsive" style="width: 200px; height: 250px;">
+                    <img src="tel-fill.png" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">137-9997-4807</p>
+                </div>
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 img-responsive" style="width: 200px; height: 250px;">
+                    <img src="img/shoukuangma.jpg" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">扫一扫，了解我们</p>
+                </div>
+            </div>
+            <div class="b">版权所有©极客大叔</div>
+        </div>
+    </div>
+
+
+
+
+
 </body>
+
 </html>
+<script>
+    $(function() {
+        $('#lists').removeClass('list-mobile')
+        $('#menus').click(function() {
+            if ($('#lists').hasClass('list-mobile')) {
+                $('#lists').removeClass('list-mobile')
+            } else {
+                $('#lists').addClass('list-mobile')
+            }
+        })
+    })
+</script>
+<script>
+    let current = Number(window.location.href.split("?page=")[1]) || 1;
+
+    page(current);
+
+    function page(page) {
+        current = page;
+
+        $('.t1').empty();
+        axios.get(`https://www.fastmock.site/mock/186c0873d117b082fded8d7c1f01e01b/train/train?page=${page}`).then(function(res) {
+            console.log(res.data);
+
+            for (let i = 0; i < 4; i++) {
+                let li = $("<li class='col-lg-3 col-md-4 col-sm-6 col-xs-12 img-responsive'></li>");
+                li.append(`<img width='250px' height='220px' style=" padding:20px;" src="${res.data.data.list[i].img}" alt="">`);
+                li.append(`<p style="font-weight: bold; font-size: 20px;">${res.data.data.list[i].title}</p>`);
+                li.append(`<p style="color:red; font-size: 10px; margin: auto;">${res.data.data.list[i].time}</p>`);
+                li.append(`<p style="font-size: 12px;">${res.data.data.list[i].content}</p>`);
+                li.attr('id', res.data.data.list[i].id)
+                $(".t1").append(li);
+
+                $('.t1 li').click(function() {
+                    window.location.href = `newsdetail.html?id=${$(this).attr('id')}`
+                })
+            }
+        })
+    }
+</script>

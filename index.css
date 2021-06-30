@@ -3,6 +3,54 @@
     padding: 0;
 }
 
+.t1 {
+    text-align: center;
+    justify-content: space-around;
+}
+
+.tro {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tro img {
+    display: block;
+    float: left;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+/* 
+.tro11 .txt11 {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+} */
+
+.txt p {
+    text-align: left;
+    padding: 20px;
+    font-size: 20px;
+    text-indent: 2em;
+}
+
+.txt p:nth-child(2) {
+    border-bottom: 1px solid #ccc;
+}
+
+.tro2 img {
+    float: right;
+}
+
+
+/* .container {
+    margin: 0 auto;
+} */
 
 #img1 {
     height: 40px;
@@ -16,8 +64,8 @@ li {
 }
 
 a {
-    color: gray;
- text-decoration: none; 
+    color: green;
+    text-decoration: none;
 }
 
 a:hover {
@@ -65,8 +113,6 @@ a:hover {
     }
 }
 
-
-
 .content .title {
     text-align: center;
 }
@@ -83,15 +129,17 @@ a:hover {
 }
 
 
-
+/* .content .title #book {
+    margin: 20px;
+} */
 
 .content .rows img {
-    width: 100%;
+    width: 94%;
     padding: 3%;
 }
 
 .content .rows .card-box {
-    height: 300px;
+    height: 310px;
     width: 200px;
     background-color: #888;
     margin: 0 auto 10px;
@@ -122,14 +170,21 @@ a:hover {
 }
 
 .footer .b {
-    height: 40px;
+    /*   height: 40px;
     margin-left: 10%;
     margin-right: 10%;
-    border-top: 7px solid #000;
+    border-top: 7px solid #000; */
     text-align: center;
     font-size: 22px;
 }
 
+
+/* .footer #footer-img {
+    display: flex;
+     justify-content: flex-end;
+    justify-content: center;
+    margin-bottom: 10px;
+} */
 
 .rows {
     display: flex;
@@ -137,13 +192,30 @@ a:hover {
     flex-wrap: wrap;
 }
 
-.footer #footer-img {
+#c1 {
+    background-color: rgba(7, 7, 241, 0.767);
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 10px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
 }
+
+
+
+
+.row1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#liao {
+    text-align: center;
+}
+
 
 #lists a:hover{
     color: white;
 }
-

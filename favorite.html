@@ -1,49 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="favorite.css">
-</head>
-<body>
-    <div id="top">
-    <div id="header">
-        <div class="logo">
-        <img src="img/log.jpg">
-        <a href="#">&nbsp;&nbsp;极客大叔的爱好</a>
-       </div>   
-        <div id="nav">
-        <a href="#movie">喜欢的电影</a>&nbsp;&nbsp;
-        <a href="#book">喜欢的书</a>&nbsp;&nbsp;
-        <a href="#">聊一聊</a>
-    </div>
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/lazysizes/5.3.2/lazysizes-umd.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script href="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="favorite.css">
+    <title>个人展示页</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="navs navbars">
+            <div class="navbar-box container">
+                <div class="a logo">
+                    <img id="img1" src="img/log.jpg">
+                    <span>极客大叔的网站</span>
+                </div>
+                <div id='menus' class="menu">菜单</div>
+
+                <div id="lists" class="b list list-mobile">
+                    <a href="index.html">企业站首页</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#mv">喜欢的电影</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#book">喜欢的书</a>&nbsp;&nbsp;&nbsp;
+                    <a class="c" href="#liao">聊一聊</a>
+                </div>
+            </div>
         </div>
     </div>
-<div id="container">
-<div id="content">     
-      <h3 id="movie">喜欢的电影</h3>
-      <ul>
-          <li><img src="img/fulian.jpg"> <h4>复仇者联盟</h4></li>
-          <li><img src="img/xialuote.jpg"> <h4>夏洛特烦恼</h4></li>
-          <li><img src="img/suji.jpg"> <h4>速度与激情</h4></li>
-          <li><img src="img/tangrenjie.jpg"> <h4>唐人街探案</h4></li>
-      </ul>
-      <h3 id="book">喜欢的书</h3>
-       <ul>
-        <li><img src="img/shuihuzhuan.jpg"><h4>水浒传</h4></li>
-        <li><img src="img/jinyindao.jpg"> <h4>金银岛</h4></li>
-        <li><img src="img/jianai.jpg"> <h4>简爱</h4></li>
-        <li><img src="img/aomanyupianjian.jpg"> <h4>傲慢与偏见</h4></li>
-    </ul>
-</div>
-</div>
-<div id="footer">
-<div id="other">
-<p>王小波说他是一只特立独行的猪，那我就当个一只特立独行的鸟把。交个朋友么，扫下右边的二维码。</p><img src="img/shoukuangma.jpg" alt=""></div> 
-</div>
-<div id="bottom"><p>版权所有&copy;大胆创有限公司</p></div>
+    <div>
+        <div class="container content">
+            <div class="title">
+                <h2 id="mv">
+                    喜欢的电影
+                </h2>
+                <div class="a"></div>
+                <br>
+            </div>
+            <ul class="rows row">
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="tangrenjie.jpg">
+                            <img data-src="img/tangrenjie.jpg" class="lazyload img-responsive" alt="">
+                            <div class="a">唐人街探案</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="xialuote.jpg">
+                            <img data-src="img/xialuote.jpg" class="lazyload img-responsive" alt="">
+                            <div class="a">夏洛特的烦恼</div>
+                        </a>
+                    </div>
+
+                </li>
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="fulian.jpg">
+                            <img data-src="img/fulian.jpg" class="lazyload img-responsive" alt="">
+                            <div class="a">复仇者联盟</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="suji.jpg">
+                            <img data-src="img/suji.jpg" class="lazyload img-responsive" alt="">
+                            <div class="a">速度与激情</div>
+                        </a>
+                    </div>
+                </li>
+
+            </ul>
+            <div class="title">
+                <h2 id="book">
+                    喜欢的书
+                </h2>
+                <div class="b"></div>
+                <br>
+
+            </div>
+            <ul class="rows row">
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box img-responsive">
+                        <a href="jianai.jpg" class="img-responsive">
+                            <img data-src="img/jianai.jpg" class="lazyload img-responsive" alt="">
+                            <div class="a">简爱</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="shuihuzhuan.jpg">
+                            <img data-src="img/shuihuzhuan.jpg" class="lazyload img-responsive" alt="">
+                            <div class="a">水浒传</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="renzhinu.png">
+                            <img data-src="img/jinyindao.jpg" class="lazyload img-responsive" alt="">
+                            <div class="a">金银岛</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="aomanyupianjian.jpg">
+                            <img data-src="img/aomanyupianjian.jpg" class="lazyload img-responsive" alt="">
+                            <div class="a">傲慢与偏见</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <div id="liao" class="a row">
+                <div class="col-lg-6 col-xl-12">
+                    <div>
+                        <p>交个朋友么，扫下右边的二维码。</p>
+                    </div>
+                    <div id="footer-img" class="col-lg-6 col-xl-12 img-responsive">
+                        <img src="img/shoukuangma.jpg" style="width: 200px;"></div>
+                </div>
+            </div>
+            <div class="b">版权所有©极客大叔</div>
+        </div>
+    </div>
 </body>
+
 </html>
+<script>
+    $(function() {
+        $('#lists').removeClass('list-mobile')
+        $('#menus').click(function() {
+            if ($('#lists').hasClass('list-mobile')) {
+                $('#lists').removeClass('list-mobile')
+            } else {
+                $('#lists').addClass('list-mobile')
+            }
+        })
+    })
+</script>
