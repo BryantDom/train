@@ -16,12 +16,12 @@ li {
 }
 
 a {
-    color: gray;
+    color: green;
  text-decoration: none; 
 }
 
 a:hover {
-    color: black;
+    color: white;
 }
 
 .navbars {

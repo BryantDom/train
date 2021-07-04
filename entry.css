@@ -246,8 +246,8 @@ nav {
     text-align: center;
 }
 .list li:hover{
-    color: red;
-    border: 1px solid red;
+    color: green;
+    border: 1px solid green;
 }
 #mapleft {
     display: flex;
